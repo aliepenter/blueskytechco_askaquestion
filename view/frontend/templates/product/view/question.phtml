@@ -1,0 +1,60 @@
+<?php
+/**
+ * Custom Catalog for store
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php
+$_product = $block->getProduct();
+?>
+<style>
+    .popup-content form{
+        width: 50%;
+        margin: 0 auto;
+        background: white;
+        text-align: center;
+    }
+    .popup-content input,
+    .popup-content textarea{
+        width: 90%
+    }
+    .hidden{
+        display: none;
+    }
+</style>
+<a href="#askquestion-popup" class="open-askquestion-popup">Ask a question</a>
+<div id="askquestion-popup" class="popup-content mfp-with-anim mfp-hide">
+    <form method="post" action="<?= $block->escapeUrl($this->getUrl('askquestion/index/save')) ?>" id="ContactFormAsk" accept-charset="UTF-8" class="contact-form">
+        <input type="hidden" name="form_type" value="contact">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="product_id" value="<?= $_product->getId()?>">
+        <h3 class="tc mg__0 mb__20">Ask a Question</h3>
+        <div>
+            <p for="ContactFormAsk-name">Your Name (required)</p>
+            <input type="text" id="ContactFormAsk-name" name="customer_name" required="required" value="">
+        </div>
+        <div>
+            <p for="ContactFormAsk-email">Your Email (required)</p>
+            <input type="email" id="ContactFormAsk-email" name="email" autocorrect="off" autocapitalize="off" value="" aria-required="true" required="required"></div><div>
+            <p for="ContactFormAsk-phone">Your Phone Number</p>
+            <input type="tel" id="ContactFormAsk-phone" name="phone" pattern="[0-9\-]*" value="">
+        </div>
+        <div>
+            <p for="ContactFormAsk-message">Your Message</p>
+            <textarea rows="20" id="ContactFormAsk-message" name="message" class=""></textarea>
+        </div>
+        <input type="submit" class="button w__100" value="Send">
+    </form>
+</div>
+<script type="text/javascript">
+    requirejs(['jquery', 'magnificPopup' ],
+        function ($, popup) {
+            $(document).ready(function(){
+                $('.open-askquestion-popup').magnificPopup({
+                    type:'inline',
+                    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+                });
+            });
+        });
+</script>

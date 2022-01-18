@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Blueskytechco_AskQuestion::askquestion" title="Customer Questions" translate="title" module="Blueskytechco_AskQuestion" sortOrder="51" resource="Blueskytechco_AskQuestion::askquestion" />
+        <add id="Blueskytechco_AskQuestion::questions_list" title="Questions List" translate="title" module="Blueskytechco_AskQuestion" sortOrder="10" parent="Blueskytechco_AskQuestion::askquestion" action="askquestion/questions" resource="Blueskytechco_AskQuestion::questions_list" />
+	</menu>
+</config>
