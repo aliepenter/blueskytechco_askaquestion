@@ -89,7 +89,6 @@ class Email extends \Magento\Framework\App\Helper\AbstractHelper
                 'name' => $this->escaper->escapeHtml($emailNameSender),
                 'email' => $this->escaper->escapeHtml($emailSender),
             ];
-            var_dump($sender);die;
             //Send Email
             $transport = $this->transportBuilder
                 ->setTemplateIdentifier($email_template_speed) 
