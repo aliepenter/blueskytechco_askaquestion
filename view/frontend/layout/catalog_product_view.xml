@@ -3,7 +3,10 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="product.info.main">
-            <block class="Magento\Catalog\Block\Product\View" name="product.upsell.stock" template="Blueskytechco_AskQuestion::product/view/question.phtml">
+            <block class="Magento\Catalog\Block\Product\View"
+                name="product.upsell.stock"
+                template="Blueskytechco_AskQuestion::product/view/question.phtml"
+                ifconfig="question_email/general/enabled">
             </block>
         </referenceContainer>
     </body>

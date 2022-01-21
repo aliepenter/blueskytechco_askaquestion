@@ -3,5 +3,6 @@
     <menu>
         <add id="Blueskytechco_AskQuestion::askquestion" title="Customer Questions" translate="title" module="Blueskytechco_AskQuestion" sortOrder="51" resource="Blueskytechco_AskQuestion::askquestion" />
         <add id="Blueskytechco_AskQuestion::questions_list" title="Questions List" translate="title" module="Blueskytechco_AskQuestion" sortOrder="10" parent="Blueskytechco_AskQuestion::askquestion" action="askquestion/questions" resource="Blueskytechco_AskQuestion::questions_list" />
-	</menu>
+		<add id="Blueskytechco_AskQuestion::configuration" title="Configuration" module="Blueskytechco_AskQuestion" sortOrder="20" parent="Blueskytechco_AskQuestion::askquestion" action="adminhtml/system_config/edit/section/question_email" resource="Blueskytechco_AskQuestion::configuration"/>
+    </menu>
 </config>

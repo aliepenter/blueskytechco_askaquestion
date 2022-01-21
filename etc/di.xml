@@ -18,12 +18,10 @@
             <argument name="filterPool" xsi:type="object" shared="false">AskQuestionQuestionsListingFilterPool</argument>
         </arguments>
     </virtualType>
-
     <virtualType name="Blueskytechco\AskQuestion\Model\ResourceModel\Question\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">askquestion_question</argument>
             <argument name="resourceModel" xsi:type="string">Blueskytechco\AskQuestion\Model\ResourceModel\Question</argument>
         </arguments>
     </virtualType>
-
 </config>

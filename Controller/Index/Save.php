@@ -58,7 +58,7 @@ class Save extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $receiveEmail = $this->scopeConfig->getValue('question_email/general/email_received', ScopeInterface::SCOPE_STORE);
-        $post = (array) $this->getRequest()->getPost();
+        $post = $this->getRequest()->getParams();
         if (!empty($post)) {
             $model = $this->questionfactory->create();
             $model->setData($post)->save();
@@ -77,7 +77,7 @@ class Save extends \Magento\Framework\App\Action\Action
         $message = __(
             'Thank you for send us question!'
         );
-        $this->messageManager->addSuccessMessage($message);
+        $this->messageManager->addSuccessMessage('qqwe');
         $resultRedirect->setUrl($this->_redirect->getRefererUrl());
         return $resultRedirect;
     }

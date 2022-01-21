@@ -110,6 +110,5 @@ class Email extends \Magento\Framework\App\Helper\AbstractHelper
                 ->addErrorMessage(__('Failed to send email, please try again later.'.$e->getMessage()));
             return;
         }
-        return true;
     }
 }
